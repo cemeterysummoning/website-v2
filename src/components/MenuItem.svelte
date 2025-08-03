@@ -20,7 +20,7 @@
 <li class="leading-[2.5em]">
     {#if expandable}
         <button type="button" onclick={toggle}  style="transform: rotate({rotation}deg);">
-            <img src="../../static/expand.svg" class="w-2.5 h-2.5">
+            <img src="../../expand.svg" class="w-2.5 h-2.5">
         </button>
     {:else}
         <div class="w-2.5 h-2.5" style="display: inline-block;"></div>

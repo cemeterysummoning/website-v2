@@ -16,7 +16,7 @@
 
 <div id="foreground" class="absolute top-0 left-0 w-screen h-screen">
 	<div id="top-bar" class="border-b-1 w-screen h-16 backdrop-blur-sm" style="border-color: var(--overlay-1); text-align: right;">
-		<a href="https://github.com/cemeterysummoning"><img src="../../static/github.svg" height="32" width="32" style="display: inline-block;"></a>
+		<a href="https://github.com/cemeterysummoning"><img src="../../github.svg" height="32" width="32" style="display: inline-block;"></a>
 		<p class="px-8 py-4" style="color: var(--blue); display: inline-block;">achun [at] mit [dot] edu</p>
 	</div>
 
