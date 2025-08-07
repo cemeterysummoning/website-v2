@@ -14,6 +14,7 @@
     {@render entry("2023 - 2024", "research assistant with", "UMD Collaborative Controls and Robotics Lab (CCRL)", "https://ccrl.umd.edu/")}
     {@render entry("2021 - 2024", "regional director for", "Steel City Codes, D.C. chapter", "https://www.steelcitycodes.org/")}
 </tbody></table>
+<!-- add bulleted list for more details under each -->
 
 <h2 id="education">education</h2>
 <table class="md:table-fixed table-auto w-full"><tbody>
@@ -21,6 +22,8 @@
     <tr><td class="year">2020 - 2024</td><td>Science, Mathematics, and Computer Science Program at Montgomery Blair</td></tr>
     <tr><td class="year">2022</td><td>MIT Beaver Works Summer Institute in Quantum Software</td></tr>
 </tbody></table>
+
+<h2 id="coursework">coursework</h2>
 
 <style>
     * {
