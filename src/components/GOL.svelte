@@ -17,8 +17,13 @@
         w_cells = 0;
         h_cells = 0;
         cell_total = 0;
-        status = [];
-        neighbors = [];
+        status = $state([]);
+
+        neighbors = [
+                [-1, -1], [-1, 0], [-1, 1],
+                [0, -1], [0, 1],
+                [1, -1], [1, 0], [1, 1]
+            ];
 
         constructor(w, h) {
             this.w_cells = Math.round(w / cellSize) - 1
@@ -27,21 +32,13 @@
 
             for (let i = 0; i < this.h_cells; i++) {
                 let temp = []
-                let temp_n = []
                 for (let j = 0; j < this.w_cells; j++) {
-                    let c = new Cell(i, j, this)
+                    let c = Math.random() < 0.05 ? 1 : 0;
                     temp.push(c);
-                    temp_n.push(0);
                 }
                 this.status.push(temp);
-                this.neighbors.push(temp_n);
             }
 
-            for (let i = 0; i < this.h_cells; i++) {
-                for (let j = 0; j < this.w_cells; j++) {
-                    this.neighbors[i][j] = this.status[i][j].getLiveCount();
-                }
-            }
         }
 
         outOfBounds(coord) {
@@ -55,67 +52,32 @@
             return false;
         }
 
-        getCellStatus(coord) {
-            return this.status[coord[0]][coord[1]].alive;
+        getLiveCount(coord) {
+            let count = 0;
+            for (let i = 0; i < this.neighbors.length; i++) {
+                let new_coord = [coord[0] + this.neighbors[i][0], coord[1] + this.neighbors[i][1]];
+                if (!this.outOfBounds(new_coord)) {
+                    count += this.status[new_coord[0]][new_coord[1]];
+                }
+            }
+            return count
         }
 
         update() {
             for (let i = 0; i < this.h_cells; i++) {
                 for (let j = 0; j < this.w_cells; j++) {
-                    let current = this.status[i][j];
-                    let neighbor_count = current.getLiveCount();
+                    let neighbor_count = this.getLiveCount([i, j]);
 
                     if (neighbor_count == 3) {
-                        current.alive = true;
+                        this.status[i][j] = 1;
                     } else {
-                        if (neighbor_count == 2 && current.alive) {
+                        if (neighbor_count == 2 && this.status[i][j] == 1) {
                             continue;
                         }
-                        current.alive = false;
+                        this.status[i][j] = 0;
                     }
                 }
             }
-        }
-    }
-
-    class Cell {
-        row = 0;
-        col = 0;
-        alive = $state(false);
-        opacity = 0;
-        parent = new Board(0, 0);
-        neighbors = [
-                [-1, -1], [-1, 0], [-1, 1],
-                [0, -1], [0, 1],
-                [1, -1], [1, 0], [1, 1]
-            ];
-
-        constructor(xind, yind, parent) {
-            this.row = xind;
-            this.col = yind;
-            this.alive = Math.random() < 0.05;
-            this.opacity = Math.random();
-            this.parent = parent
-        }
-
-        getLiveCount() {
-            let count = 0;
-
-            for (let i = 0; i < this.neighbors.length; i++) {
-                let d = this.neighbors[i]
-
-                let test = [this.row + d[0], this.col + d[1]]
-                
-                if (this.parent.outOfBounds(test)) {
-                    continue;
-                }
-
-                if (this.parent.getCellStatus(test)) {
-                    count += 1;
-                }
-            }
-
-            return count;
         }
     }
 
@@ -123,14 +85,6 @@
 
     $effect(() => {
         const interval = setInterval(() => {
-            // let random_row = Math.floor(Math.random() * board.h_cells);
-            // let random_col = Math.floor(Math.random() * board.w_cells);
-            // console.log(random_row, random_col);
-            // console.log(board.getCellStatus([random_row, random_col]))
-            
-            // board.status[random_row][random_col].alive = !board.status[random_row][random_col].alive;
-            // console.log(board.getCellStatus([random_row, random_col]))
-
             board.update();
         }, interval_val);
         return () => {
@@ -144,7 +98,7 @@
 <div class="h-full w-full grid" id="container">
     {#each {length: board.h_cells} as _, i}
         {#each {length: board.w_cells} as _, j}
-            <div class="h-[{cellSize}px] w-[{cellSize}px]" style="background-color: var(--mauve); opacity: {board.status[i][j].alive ? 1 : 0}"></div>
+            <div class="h-[{cellSize}px] w-[{cellSize}px]" style="background-color: var(--mauve); opacity: {board.status[i][j]}"></div>
         {/each}
     {/each}
 </div>
