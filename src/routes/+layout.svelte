@@ -3,6 +3,7 @@
 	import MenuItem from '../components/MenuItem.svelte'
 	import GOL from '../components/GOL.svelte'
 	import { fly, fade } from 'svelte/transition';
+	import { animate } from './shared.js'
 	
 	let { children } = $props();
 	let width = $state(0);
@@ -12,6 +13,9 @@
 	let menuOpen = $state(true);
 	function closeMenu() {
 		menuOpen = !menuOpen;
+	}
+	function playToggle() {
+		$animate = !$animate;
 	}
 </script>
 
@@ -28,8 +32,9 @@
 <div id="foreground" class="absolute top-0 left-0 w-screen h-screen">
 	{#if desktop}
 	<div id="top-bar" class="border-b-1 w-screen h-16 backdrop-blur-sm grid grid-cols-2" style="border-color: var(--overlay-1);">
-		<div class="flex px-8 justify-start items-center gap-4" onclick={closeMenu} style="text-align: left;">
-			<img src="../../menu_open.svg" height="32" width="32" style="display: inline-block;  cursor: pointer;">
+		<div class="flex px-8 justify-start items-center gap-4" style="text-align: left;">
+			<img onclick={closeMenu}  src="../../menu_open.svg" height="32" width="32" style="display: inline-block;  cursor: pointer;">
+			<img src={$animate ? '../../pause.svg' : '../../play.svg'} onclick={playToggle} height="32"  width="32" style="display: inline-block;  cursor: pointer;">
 		</div>
 		<div class="h-full px-8 flex justify-end items-center gap-8">
 			<a href="https://github.com/cemeterysummoning"><img src="../../github.svg" height="32" width="32"></a>
@@ -57,8 +62,9 @@
 		</div>
 	{:else}
 		<div id="top-bar" class="border-b-1 w-screen h-16 backdrop-blur-sm" style="border-color: var(--overlay-1);">
-		<div class="flex px-8 h-full justify-start items-center gap-4" onclick={closeMenu} style="text-align: left;">
-			<img src="../../menu_open.svg" height="32" width="32" style="display: inline-block;  cursor: pointer;">
+		<div class="flex px-8 h-full justify-start items-center gap-4"style="text-align: left;">
+			<img onclick={closeMenu} src="../../menu_open.svg" height="32" width="32" style="display: inline-block;  cursor: pointer;">
+			<img src={$animate ? '../../pause.svg' : '../../play.svg'} onclick={playToggle} height="32"  width="32" style="display: inline-block;  cursor: pointer;">
 		</div>
 		</div>
 

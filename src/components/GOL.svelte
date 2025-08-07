@@ -1,7 +1,8 @@
 <script>
     import { onMount } from "svelte";
+    import { animate } from "../routes/shared.js";
     let cellSize = $state(8);
-    let interval_val = $state(500);
+    let interval_val = 500;
 
     let w = $state(0);
     let h = $state(0);
@@ -84,14 +85,21 @@
     let board = $derived.by(() => new Board(w, h));
 
     $effect(() => {
-        const interval = setInterval(() => {
+        let interval; 
+
+        if (!$animate) {
+            clearInterval(interval);
+        } else {
+            interval = setInterval(() => {
             board.update();
-        }, interval_val);
+            }, interval_val);
+        }
+        
+        
         return () => {
             clearInterval(interval);
         }
     });
-    
 </script>
 
 <svelte:window bind:outerWidth={w} bind:outerHeight={h} />
