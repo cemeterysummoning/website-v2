@@ -59,18 +59,18 @@
         </tr>
     {/snippet}
 <table class="md:table-fixed table-auto w-full"><tbody>
-    {@render course("Fall 2024", [
-        '18.C06 — Linear Algebra and Optimization',
-        '6.1010 — Fundamentals of Programming',
-        'CC.5111 — Principles of Chemical Science',
-        'CC.110 — Becoming Human: Ancient Greek Perspectives on the Good Life'
-    ])}
     {@render course("Spring 2025", [
         '6.1210 — Introduction to Algorithms',
         '6.3900 — Introduction to Machine Learning',
         'CC.8022 — Electricity and Magnetism',
         '7.016 — Introductory Biology',
         'STS.012 — Technologies and Controversies in Everyday Life'
+    ])}
+    {@render course("Fall 2024", [
+        '18.C06 — Linear Algebra and Optimization',
+        '6.1010 — Fundamentals of Programming',
+        'CC.5111 — Principles of Chemical Science',
+        'CC.110 — Becoming Human: Ancient Greek Perspectives on the Good Life'
     ])}
 </tbody></table>
 

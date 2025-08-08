@@ -25,11 +25,11 @@
 	<GOL />
 </div>
 
-<div id="filter" class="w-screen h-screen top-0 left-0 right-0 bottom-0 fixed">
+<div id="filter" class="w-screen h-full top-0 left-0 right-0 bottom-0 fixed">
 
 </div>
 
-<div id="foreground" class="absolute top-0 left-0 w-screen h-screen">
+<div id="foreground" class="absolute top-0 left-0 w-screen h-full">
 	{#if desktop}
 	<div id="top-bar" class="border-b-1 w-screen h-16 backdrop-blur-sm grid grid-cols-2" style="border-color: var(--overlay-1);">
 		<div class="flex px-8 justify-start items-center gap-4" style="text-align: left;">
