@@ -1,4 +1,7 @@
 import adapter from '@sveltejs/adapter-vercel';
+import { mdsvex } from 'mdsvex';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import sveltexPreprocessor from './sveltex.config.js'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -12,7 +15,15 @@ const config = {
 		paths: {
 			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		}
-	}
+	}, 
+	extensions: ['.svelte', '.md', '.sveltex'],
+	preprocess: [
+		vitePreprocess(),
+		sveltexPreprocessor,
+		mdsvex({
+			extensions: ['.md']
+		})
+	]
 };
 
 export default config;

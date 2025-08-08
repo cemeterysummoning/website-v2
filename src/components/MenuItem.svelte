@@ -1,6 +1,6 @@
 <script>
     import { fade } from 'svelte/transition';
-    let { name, subdirs=[], href } = $props();
+    let { name, subdirs=[], href, close = () => {} } = $props();
 
     let expandable = subdirs.length > 0;
 
@@ -15,6 +15,10 @@
             rotation = 90;
         }
     };
+
+    let onClose = () => {
+        close();
+    }
 </script>
 
 <li class="leading-[2.5em]">
@@ -25,12 +29,12 @@
     {:else}
         <div class="w-2.5 h-2.5" style="display: inline-block;"></div>
     {/if}
-    <a href={href}>{name}</a>
+    <a href={href} onclick={onClose}>{name}</a>
     {#if !collapsed}
     <ol class="pl-10" transition:fade>
         
         {#each subdirs as sub}
-            <li><a href="{sub[1]}" class="submenu">{sub[0]}</a></li>
+            <li><a href="{sub[1]}" class="submenu" onclick={onClose}>{sub[0]}</a></li>
         {/each}
         
     </ol>
@@ -40,6 +44,7 @@
 <style>
     button {
         transition: transform 0.3s ease-in-out;
+        z-index: 2;
     }
     .submenu {
         color: var(--lavender);

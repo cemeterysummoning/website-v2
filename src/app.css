@@ -42,7 +42,7 @@
 
 #filter {
     background-color: var(--background);
-    opacity: 0.7;
+    opacity: 0.8;
     z-index: -1;
 }
 

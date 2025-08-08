@@ -2,7 +2,7 @@
 	import '../app.css';
 	import MenuItem from '../components/MenuItem.svelte'
 	import GOL from '../components/GOL.svelte'
-	import { fly, fade } from 'svelte/transition';
+	import { fly, fade, draw } from 'svelte/transition';
 	import { animate } from './shared.js'
 	
 	let { children } = $props();
@@ -70,14 +70,14 @@
 
 			<div class="flex justify-items-center px-16 py-8">
 				{#if menuOpen}
-				<nav class="basis-90" in:fly={{ x: -50 }} onclick={closeMenu}>
+				<nav class="basis-90" in:fly={{ x: -50 }}>
 					<ol>
-						<MenuItem name={"home"} href={"/"}/>
-						<MenuItem name={"about"} subdirs={[["work", "/about#work"], ["education", "/about#education"], ["resume", "../../static/Resume.pdf"]]} href={"/about"}/>
-						<MenuItem name={"notes"} href={"/notes"} subdirs={[["minis", "/notes/minis"]]}/>
-						<MenuItem name={"projects"} href={"/projects"}/>
+						<MenuItem name={"home"} href={"/"} close={() => closeMenu()}/>
+						<MenuItem name={"about"} subdirs={[["work", "/about#work"], ["education", "/about#education"], ["resume", "../../static/Resume.pdf"]]} href={"/about"} close={() => closeMenu()}/>
+						<MenuItem name={"notes"} href={"/notes"} subdirs={[["minis", "/notes/minis"]]} close={() => closeMenu()}/>
+						<MenuItem name={"projects"} href={"/projects"} close={() => closeMenu()}/>
 						<!-- <MenuItem name={"blog"} href={"/blog"}/> -->
-						<MenuItem name={"media"} subdirs={[["photos", "https://drive.google.com/drive/u/4/folders/1a63-tasghTbbVWaHB7gKIZ5WhYEDLPjU?usp=sharing"], ["origami", "https://drive.google.com/drive/u/4/folders/1IhjJT39Yes32mFmDbWF3VV4T5UshebKW"]]} href={"/media"}/>
+						<MenuItem name={"media"} subdirs={[["photos", "https://drive.google.com/drive/u/4/folders/1a63-tasghTbbVWaHB7gKIZ5WhYEDLPjU?usp=sharing"], ["origami", "https://drive.google.com/drive/u/4/folders/1IhjJT39Yes32mFmDbWF3VV4T5UshebKW"]]} href={"/media"} close={() => closeMenu()}/>
 					</ol>
 				</nav>
 				{:else}
