@@ -31,6 +31,7 @@
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
     color: var(--text);
     /* line-height: 2.5em; */
+    overflow-x: hidden;
 }
 
 #background {

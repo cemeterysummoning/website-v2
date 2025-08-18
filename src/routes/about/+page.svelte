@@ -7,12 +7,16 @@
 <p>I like <a href="https://letterboxd.com/cemeteryscene/">movies</a>, <a href="https://cemeterysummoning.github.io/sketches/">creative coding</a>, and reading wikipedia.</p>
 
 <h2 id="work">work</h2>
-<table class="md:table-fixed table-auto w-full"><tbody>
+<table class="md:table-fixed table-auto w-[98%]"><tbody>
     {#snippet entry(year, txt, name, link, ls)}
-        <tr><td class="year w-1/6 border-y-2 align-top">{year}</td>
+        <tr><td class="year w-1/5 border-y-2 align-top">{year}</td>
             <td>{txt} <a href={link}>{name}</a> <br> <Info info={ls} /></td>
         </tr>
     {/snippet}
+    {@render entry("2025", "research assistant with", "MIT IDSS", "https://idss.mit.edu", [
+        "Worked with Dr. Crystal Lee and Prof. Catherine D'ignazio",
+        'Qualitative research into the proliferation of carceral technologies throughout society'
+    ])}
     {@render entry("2025", "Undergraduate Research Fellow at", "NIST", "https://www.nist.gov/surf", [
         'Work as part of the NIST Summer Undergraduate Research Fellowship',
         'Worked with Dr. Justyna Zwolak and Dr. Merritt Losert on optimizing latched readouts of quantum dot hybrid qubits',
@@ -46,19 +50,19 @@
 <!-- add bulleted list for more details under each -->
 
 <h2 id="education">education</h2>
-<table class="md:table-fixed table-auto w-full"><tbody>
-    <tr><td class="year w-1/6 border-y-2">2024 -</td><td>Massachusetts Institute of Technology</td></tr>
+<table class="md:table-fixed table-auto w-[98%]"><tbody>
+    <tr><td class="year w-1/5 border-y-2">2024 -</td><td>Massachusetts Institute of Technology</td></tr>
     <tr><td class="year">2020 - 2024</td><td>Science, Mathematics, and Computer Science Program at Montgomery Blair</td></tr>
     <tr><td class="year">2022</td><td>MIT Beaver Works Summer Institute in Quantum Software</td></tr>
 </tbody></table>
 
 <h2 id="coursework">coursework</h2>
 {#snippet course(year, ls)}
-        <tr><td class="year w-1/6 border-y-2 align-top">{year}</td>
+        <tr><td class="year w-1/5 border-y-2 align-top">{year}</td>
             <td><Info info={ls} /></td>
         </tr>
     {/snippet}
-<table class="md:table-fixed table-auto w-full"><tbody>
+<table class="md:table-fixed table-auto w-[98%]"><tbody>
     {@render course("Spring 2025", [
         '6.1210 — Introduction to Algorithms',
         '6.3900 — Introduction to Machine Learning',

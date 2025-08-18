@@ -56,7 +56,7 @@
 		{/if}
 	
 
-			<div class="flex-l w-[60%] pl-16 md:mx-16 md:mb-8">
+			<div class="flex-l w-[60%] pl-8 md:mx-8 md:mb-8">
 				{@render children()}
 			</div>
 		</div>
