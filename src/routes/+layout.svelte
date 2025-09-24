@@ -46,7 +46,7 @@
 			<nav class="basis-90" transition:fly={{ x: -200 }}>
 				<ol>
 					<MenuItem name={"home"} href={"/"}/>
-					<MenuItem name={"about"} subdirs={[["work", "/about#work"], ["education", "/about#education"], ["resume", "../../static/Resume.pdf"]]} href={"/about"}/>
+					<MenuItem name={"about"} subdirs={[["work", "/about#work"], ["education", "/about#education"], ["resume", "../../Resume.pdf"]]} href={"/about"}/>
 					<MenuItem name={"notes"} href={"/notes"}/>
 					<MenuItem name={"projects"} href={"/projects"}/>
 					<!-- <MenuItem name={"blog"} href={"/blog"}/> -->
