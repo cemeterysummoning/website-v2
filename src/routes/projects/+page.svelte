@@ -5,6 +5,9 @@
 <h1>projects</h1>
 
 <div class="grid md:grid-cols-2 gap-4">
+<ProjectThumbnail name="Boids" 
+description="Boids simulation, written in GLOO and C++. 6.4400 final project with Phoenix Wu"
+gitlink="https://github.com/cemeterysummoning/boids-v2" />
     <ProjectThumbnail name="MagnetoSuture™ Annotator" 
         description="Video annotator created for MagnetoSuture™, created as part of my internship at UMD Department of Mechanical Engineering"
         gitlink="https://github.com/cemeterysummoning/annotator" />

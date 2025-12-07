@@ -63,6 +63,12 @@
         </tr>
     {/snippet}
 <table class="md:table-fixed table-auto w-[98%]"><tbody>
+    {@render course("Fall 2025", [
+        '6.4400 — Computer Graphics',
+        '18.4041 — Theory of Computation',
+        '18.600 — Probability and Random Variables',
+        'CMS.614 — Critical Internet Studies',
+    ])}
     {@render course("Spring 2025", [
         '6.1210 — Introduction to Algorithms',
         '6.3900 — Introduction to Machine Learning',
