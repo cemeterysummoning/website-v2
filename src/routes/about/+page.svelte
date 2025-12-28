@@ -3,7 +3,7 @@
 </script>
 <h1>hey, I'm Ace.</h1>
 
-<p>I'm a second-year undergraduate student at MIT, studying [ <a href="https://www.eecs.mit.edu/">computer science</a> | <a href="https://sts-program.mit.edu/">science, technology, and society (STS)</a> ]. </p>
+<p>I'm a second-year undergraduate student at MIT, studying [ <a href="https://www.eecs.mit.edu/">computer science</a> | <a href="https://cmsw.mit.edu">comparative media studies (CMS)</a> ]. </p>
 <p>I like <a href="https://letterboxd.com/cemeteryscene/">movies</a>, <a href="https://cemeterysummoning.github.io/sketches/">creative coding</a>, and reading wikipedia.</p>
 
 <h2 id="work">work</h2>
