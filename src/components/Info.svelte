@@ -24,9 +24,9 @@
 
 
 {#if !collapsed}
-    <ol class="pl-4 list-disc text-sm leading-5" transition:fade>
+    <ol class="pl-4 text-sm" transition:fade>
         {#each info as sub}
-            <li>{sub}</li>
+            <li>→ {sub}</li>
         {/each}
     </ol>
 {/if}

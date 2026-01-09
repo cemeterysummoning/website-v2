@@ -13,6 +13,15 @@
             <td>{txt} <a href={link}>{name}</a> <br> <Info info={ls} /></td>
         </tr>
     {/snippet}
+    {@render entry("2024 - 2026", "research assistant with", "MIT FutureTech", "https://futuretech.mit.edu/", [
+        'Worked with Dr. Jayson Lynch as part of the Measuring Progress in Algorithms group',
+        'Surveyed and analyzed time and space complexity of quantum algorithms',
+        'Contributed complexity data to the Quantum Economic Advantage Calculator'
+    ])}
+    {@render entry("2026", "digital humanities researcher with", "MIT Concourse", "https://concourse.mit.edu", [
+        "Worked with Dr. Daniel Keliher and Dr. Erica Zimmer",
+        "Developed clustering and temporal trend models over the EEBO-TCP/VEP Early Modern Science collection"
+    ])}
     {@render entry("2025", "research assistant with", "MIT IDSS", "https://idss.mit.edu", [
         "Worked with Dr. Crystal Lee and Prof. Catherine D'ignazio",
         'Qualitative research into the proliferation of carceral technologies throughout society'
@@ -22,11 +31,6 @@
         'Worked with Dr. Justyna Zwolak and Dr. Merritt Losert on optimizing latched readouts of quantum dot hybrid qubits',
         'Designed a U-Net-based image processing pipeline for line and point localization from charge stability diagrams',
         'Presented a poster at the 2025 Quantum Computing Program Review (QCPR)'
-    ])}
-    {@render entry("2024 - 2025", "research assistant with", "MIT FutureTech", "https://futuretech.mit.edu/", [
-        'Worked with Dr. Jayson Lynch as part of the Measuring Progress in Algorithms group',
-        'Surveyed and analyzed time and space complexity of quantum algorithms',
-        'Contributed complexity to the Quantum Economic Advantage Calculator'
     ])}
     {@render entry("2024", "course instructor for", "BWSI Quantum Software", "https://beaverworks.ll.mit.edu/CMS/bw/bwsi_quantum_software", [
         "Teaching staff for the Beaver Works Summer Institute, 2024, with Melvin Lin",
