@@ -3,14 +3,24 @@
 
 <script>
     import { Gallery } from 'flowbite-svelte';
-    const FOLDER_ID = "1a63-tasghTbbVWaHB7gKIZ5WhYEDLPjU";
-    const apiKey = import.meta.env.VITE_GDRIVE_KEY
+    import { CldImage } from 'svelte-cloudinary'
+    import { Cloudinary } from '@cloudinary/url-gen';
+
+    const CLOUD_NAME = import.meta.env.VITE_PUBLIC_CLOUDINARY_CLOUD_NAME;
+
+    const cld = new Cloudinary({
+      cloud: {
+        cloudName: CLOUD_NAME
+      }
+    });
+    
+
     let images = $state([]);
 
     let col1 = $state([]);
     let col2 = $state([]);
 
-    function shuffle(array) {
+  function shuffle(array) {
     let currentIndex = array.length;
 
     while (currentIndex != 0) {
@@ -23,34 +33,34 @@
     }
   }
 
-    async function loadImages() {
-        const res = await fetch(
-            `https://www.googleapis.com/drive/v3/files?q='${FOLDER_ID}'+in+parents and mimeType contains 'image/'&fields=files(id,name)&key=${apiKey}`);
-        const data = await res.json();
+  async function loadImages() {
+      const url = `https://res.cloudinary.com/${CLOUD_NAME}/image/list/img.json`;
+      const res = await fetch(url);
 
-        data.files.forEach(img => {
-          images.push({
-            alt: img.name,
-            src: `https://lh3.googleusercontent.com/d/${img.id}`
-          })
+      const data = await res.json();
+
+      console.log(data)
+
+      data.resources.forEach(img => {
+        images.push({
+          alt: img.public_id,
+          src: cld.image(img.public_id).format('auto').quality('auto').toURL()
         })
+      })
 
-        shuffle(images);
+      shuffle(images);
 
-        col1 = images.slice(0, 20);
-        col2 = images.slice(20, 40);
-        
-    }
+      col1 = images.slice(0, 20);
+      col2 = images.slice(20, 40);
+      
+  }
 
     loadImages();
 </script>
 <h1>media</h1>
 
-<Gallery class="grid-cols-2 gap-4 md:grid-cols-2">
-  <Gallery items={col1} />
-  <Gallery items={col2} />
-</Gallery>
-<!-- <img src="https://lh3.googleusercontent.com/d/1vycuW-cLseRCXOmBemxQ8wOwrCxqaPUA" /> -->
-<!-- <img src="https://lh3.googleusercontent.com/pw/AP1GczPO2Pze_MQr29vQfcJ744Pe2S5IxAd42WTwy7uvr3ueqwSOiIsD7sQE2dmnl-p8-86PFzfLmlMxLS0C1Wzvr1RiKm6O6x5C1xVqjMqWVD4UzQOYCiP7zIjnF93IwYUHW02VVS7C3eOu_D1uFcuyEuw=w1687-h949-s-no-gm?authuser=3" />
 
-<a href="https://lh3.googleusercontent.com/pw/AP1GczMTX1hTaKG6fu1A1T_vG29tlJ5Ema0HgRhIj8TH7wR6tMIwMia6h5ZMBUW35eHLfNqajHQUOfFgp4Z-X1Q0rWy76koBQ_sUZV-H329o0Lftfb7nDg=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/pw/AP1GczMTX1hTaKG6fu1A1T_vG29tlJ5Ema0HgRhIj8TH7wR6tMIwMia6h5ZMBUW35eHLfNqajHQUOfFgp4Z-X1Q0rWy76koBQ_sUZV-H329o0Lftfb7nDg=w600-h315-p-k" /> </a> -->
+<Gallery class="gap-4 grid-cols-2">
+  <Gallery items={col1} class="gap-4"/>
+  <Gallery items={col2} class="gap-4"/>
+</Gallery>
