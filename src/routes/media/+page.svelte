@@ -60,7 +60,7 @@
 <h1>media</h1>
 
 
-<Gallery class="gap-4 grid-cols-2">
+<Gallery class="gap-4 grid-cols-1 md:grid-cols-2">
   <Gallery items={col1} class="gap-4"/>
   <Gallery items={col2} class="gap-4"/>
 </Gallery>
