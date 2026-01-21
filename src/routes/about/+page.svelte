@@ -37,7 +37,7 @@
 <h1>hey, I'm Ace.</h1>
 
 <p>I'm a second-year undergraduate student at MIT, studying [ <a href="https://www.eecs.mit.edu/">computer science</a> | <a href="https://cmsw.mit.edu">comparative media studies (CMS)</a> ]. </p>
-<p>I like <a href="https://letterboxd.com/cemeteryscene/">movies</a>, <a href="https://cemeterysummoning.github.io/sketches/">creative coding</a>, and reading wikipedia.</p> I am primarily interested in research questions about [ <span style="color: var(--mauve);">computability and complexity theory</span> | <span style="color: var(--mauve);">sociotechnical systems</span> | <span style="color: var(--mauve);">education</span> ], but I'm always eager to learn more about anything!
+<p>I like <a href="https://letterboxd.com/cemeteryscene/">movies</a>, <a href="https://cemeterysummoning.github.io/sketches/">creative coding</a>, and reading wikipedia. I take <a href="/media">photos</a> sometimes.</p> I am primarily interested in research questions about [ <span style="color: var(--mauve);">computability and complexity theory</span> | <span style="color: var(--mauve);">sociotechnical systems</span> | <span style="color: var(--mauve);">education</span> ], but I'm always eager to learn more about anything!
 
 <h2 id="categories">[ <a class="category" onclick={toggleResearch} role="button" tabindex=0 style="color: var({researchColor});">research</a> | <a class="category" onclick={toggleWork} role="button" tabindex=0 style="color: var({workColor});">work</a> | <a class="category" onclick={toggleEducation} role="button" tabindex=0 style="color: var({eduColor});">education</a> ]</h2>
 

@@ -58,9 +58,19 @@
     loadImages();
 </script>
 <h1>media</h1>
+<p>i like noticing things, big and small. <a role="button" id="refresh" onclick={() => {
+  shuffle(images);
+  col1 = images.slice(0, 20);
+  col2 = images.slice(20, 40);
+}}>refresh photos</a> </p> <br><br>
 
-
-<Gallery class="gap-4 grid-cols-1 md:grid-cols-2">
+<Gallery class="gap-4 grid-cols-1 md:grid-cols-2 items-start content-start">
   <Gallery items={col1} class="gap-4"/>
   <Gallery items={col2} class="gap-4"/>
 </Gallery>
+
+<style>
+  #refresh:hover {
+    cursor: pointer;
+  }
+</style>
