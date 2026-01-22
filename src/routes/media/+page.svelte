@@ -51,7 +51,7 @@
       shuffle(images);
 
       col1 = images.slice(0, 10);
-      col2 = images.slice(10, 40);
+      col2 = images.slice(10, 20);
       
   }
 
