@@ -1,7 +1,8 @@
 <script>
 	import '../app.css';
 	import MenuItem from '../components/MenuItem.svelte'
-	import GOL from '../components/GOL.svelte'
+	// import GOL from '../components/GOL.svelte'
+	import GOLCanvas from '../components/GOLCanvas.svelte';
 	import { fly, fade, draw } from 'svelte/transition';
 	import { animate } from './shared.js'
 	
@@ -22,7 +23,7 @@
 <svelte:window bind:innerWidth={width} />
 
 <div id="background" class="w-full h-full top-0 left-0 right-0 bottom-0 fixed">
-	<GOL />
+	<GOLCanvas />
 </div>
 
 <div id="filter" class="w-screen h-full top-0 left-0 right-0 bottom-0 fixed">
