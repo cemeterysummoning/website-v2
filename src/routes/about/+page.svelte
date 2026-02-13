@@ -48,20 +48,25 @@
             <td>{txt} <a href={link}>{name}</a> <br> <Info info={ls} /></td>
         </tr>
     {/snippet}
+    {@render entry("2026 —", "research assistant with the", "MIT Visualization Group", "https://vis.csail.mit.edu", [
+        'Working with Josh Pollock for GoFish, a library for a formal and declarative visualization grammar',
+        'Designing UIs for robust API documentation'
+    ])}
     {@render entry("2024 — 2026", "research assistant with", "MIT FutureTech", "https://futuretech.mit.edu/", [
         'Worked with Dr. Jayson Lynch as part of the Measuring Progress in Algorithms group',
         'Surveyed and analyzed time and space complexity of quantum algorithms',
         'Contributed complexity data to the Quantum Economic Advantage Calculator'
     ])}
     {@render entry("2026", "digital humanities researcher with", "MIT Concourse", "https://concourse.mit.edu", [
-        "Worked with Dr. Daniel Keliher and Dr. Erica Zimmer",
-        "Developed clustering and temporal trend models over the EEBO-TCP/VEP Early Modern Science collection"
+        "Worked with Dr. Daniel Keliher and Dr. Erica Zimmer, examining the EEBO-TCP/VEP Early Modern Science collection",
+        "Developed clustering and temporal trend models, conducting topological data analysis using methods inspired by Mapper and persistent homology",
+        "Exploring textual influences and developments in early scientific writing, with the goal of extending claims to early modern corpora"
     ])}
     {@render entry("2025", "research assistant with", "MIT IDSS", "https://idss.mit.edu", [
         "Worked with Dr. Crystal Lee and Prof. Catherine D'ignazio",
         'Qualitative research into the proliferation of carceral technologies throughout society'
     ])}
-    {@render entry("2025", "Undergraduate Research Fellow at", "NIST", "https://www.nist.gov/surf", [
+    {@render entry("2025", "undergraduate research fellow at", "NIST", "https://www.nist.gov/surf", [
         'Work as part of the NIST Summer Undergraduate Research Fellowship',
         'Worked with Dr. Justyna Zwolak and Dr. Merritt Losert on optimizing latched readouts of quantum dot hybrid qubits',
         'Designed a U-Net-based image processing pipeline for line and point localization from charge stability diagrams',
@@ -91,6 +96,9 @@
     ])}
     {@render entry("2026", "undergraduate teaching assistant for", "CC.1802: Multivariable Calculus", "https://concourse.mit.edu/class/cc-1802/", [
         "MIT Concourse teaching staff for multivariable calculus, under Daniel Keliher"
+    ])}
+    {@render entry("2025", "tutor with", "MIT HKN", "https://hkn.mit.edu", [
+        "tutored students taking 6.1210: Introduction to Algorithms"
     ])}
     {@render entry("2025 — 2026", "undergraduate scholar with", "MIT SERC", "https://computing.mit.edu/cross-cutting/social-and-ethical-responsibilities-of-computing/SERC-scholars-program/", [
         "Member of the Social and Ethical Responsibilities of Computing Scholars program",
@@ -127,6 +135,13 @@
         </tr>
     {/snippet}
 <table class="md:table-fixed table-auto w-[98%]"><tbody>
+    {@render course("Spring 2026", [
+        '6.1903 — Introduction to Low-level Programming in C and Assembly',
+        '6.1910 — Computation Structures',
+        '6.1220 — Design and Analysis of Algorithms',
+        '6.S058 — Introduction to Computer Vision',
+        '4.602 — Modern Art and Mass Culture',
+    ])}
     {@render course("Fall 2025", [
         '6.4400 — Computer Graphics',
         '18.4041 — Theory of Computation',
@@ -144,7 +159,8 @@
         '18.C06 — Linear Algebra and Optimization',
         '6.1010 — Fundamentals of Programming',
         'CC.5111 — Principles of Chemical Science',
-        'CC.110 — Becoming Human: Ancient Greek Perspectives on the Good Life'
+        'CC.110 — Becoming Human: Ancient Greek Perspectives on the Good Life',
+        '6.2020 — Electronics Project Laboratory'
     ])}
     {@render course("ASEs", [
         '18.03 — Differential Equations',
