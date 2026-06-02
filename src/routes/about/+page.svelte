@@ -168,7 +168,7 @@
         '6.2020  — Electronics Project Laboratory'
     ])}
     {@render course("ASEs", [
-        '6.1200  — Mathematics for Computer Science'
+        '6.1200  — Mathematics for Computer Science',
         '18.03   — Differential Equations',
         '18.02   — Multivariable Calculus/Calculus II',
         '6.100A  — Introduction to Computer Science Programming in Python',
