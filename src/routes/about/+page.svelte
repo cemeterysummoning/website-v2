@@ -48,6 +48,11 @@
             <td>{txt} <a href={link}>{name}</a> <br> <Info info={ls} /></td>
         </tr>
     {/snippet}
+    {@render entry("2026 —", "research assistant with the", "Programming Languages and Verification Group", "http://plv.csail.mit.edu/", [
+        'Working with Joonhyup Lee and Elvis Liu on hardware verification for AI payloads',
+        'Utilizing the Rocq prover to formalize specifications for AI safety'
+    ])}
+
     {@render entry("2026 —", "research assistant with the", "MIT Visualization Group", "https://vis.csail.mit.edu", [
         'Working with Josh Pollock for GoFish, a library for a formal and declarative visualization grammar',
         'Designing UIs for robust API documentation'
@@ -136,36 +141,37 @@
     {/snippet}
 <table class="md:table-fixed table-auto w-[98%]"><tbody>
     {@render course("Spring 2026", [
-        '6.1903 — Introduction to Low-level Programming in C and Assembly',
-        '6.1910 — Computation Structures',
-        '6.1220 — Design and Analysis of Algorithms',
-        '6.S058 — Introduction to Computer Vision',
-        '4.602 — Modern Art and Mass Culture',
+        '6.1903  — Introduction to Low-level Programming in C and Assembly',
+        '6.1910  — Computation Structures',
+        '6.1220  — Design and Analysis of Algorithms',
+        '6.S058  — Introduction to Computer Vision',
+        '4.602   — Modern Art and Mass Culture',
     ])}
     {@render course("Fall 2025", [
-        '6.4400 — Computer Graphics',
+        '6.4400  — Computer Graphics',
         '18.4041 — Theory of Computation',
-        '18.600 — Probability and Random Variables',
+        '18.600  — Probability and Random Variables',
         'CMS.614 — Critical Internet Studies',
     ])}
     {@render course("Spring 2025", [
-        '6.1210 — Introduction to Algorithms',
-        '6.3900 — Introduction to Machine Learning',
+        '6.1210  — Introduction to Algorithms',
+        '6.3900  — Introduction to Machine Learning',
         'CC.8022 — Electricity and Magnetism',
-        '7.016 — Introductory Biology',
+        '7.016   — Introductory Biology',
         'STS.012 — Technologies and Controversies in Everyday Life'
     ])}
     {@render course("Fall 2024", [
-        '18.C06 — Linear Algebra and Optimization',
-        '6.1010 — Fundamentals of Programming',
+        '18.C06  — Linear Algebra and Optimization',
+        '6.1010  — Fundamentals of Programming',
         'CC.5111 — Principles of Chemical Science',
-        'CC.110 — Becoming Human: Ancient Greek Perspectives on the Good Life',
-        '6.2020 — Electronics Project Laboratory'
+        'CC.110  — Becoming Human: Ancient Greek Perspectives on the Good Life',
+        '6.2020  — Electronics Project Laboratory'
     ])}
     {@render course("ASEs", [
-        '18.03 — Differential Equations',
-        '18.02 — Multivariable Calculus/Calculus II',
-        '6.100A — Introduction to Computer Science Programming in Python',
+        '6.1200  — Mathematics for Computer Science'
+        '18.03   — Differential Equations',
+        '18.02   — Multivariable Calculus/Calculus II',
+        '6.100A  — Introduction to Computer Science Programming in Python',
     ])}
 </tbody></table>
 {/if}
