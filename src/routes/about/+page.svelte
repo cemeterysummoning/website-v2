@@ -49,13 +49,14 @@
         </tr>
     {/snippet}
     {@render entry("2026 —", "research assistant with the", "Programming Languages and Verification Group", "http://plv.csail.mit.edu/", [
-        'Working with Joonhyup Lee and Elvis Liu on hardware verification for AI payloads',
-        'Utilizing the Rocq prover to formalize specifications for AI safety'
+        'Working with Joonhyup Lee and Elvis Liu on formal verification for FPGA modules, towards implementing safety protocols within data center facilities',
+        'Implemented cryptographic hashing modules in Bluespec SystemVerilog (BSV) and proved correctness and performance theorems with the Rocq Prover'
     ])}
 
     {@render entry("2026 —", "research assistant with the", "MIT Visualization Group", "https://vis.csail.mit.edu", [
-        'Working with Josh Pollock for GoFish, a library for a formal and declarative visualization grammar',
-        'Designing UIs for robust API documentation'
+        'Worked with Dr. Josh Pollock for GoFish, a library for a formal and declarative visualization grammar; designed UIs for robust API documentation and implemented area partition features for TreeMap visualizations',
+        'Working with Arnav Verma on modeling natural language responses to visualizations; designing a domain-specific language equipped with a set of cognitive operators and a type system to express the inferences viewers make when viewing a visualization',
+        'Reasoning about cognitive affordances of different visual operators present within a graph that enable or repress different understandings and interpretations compared to others'
     ])}
     {@render entry("2024 — 2026", "research assistant with", "MIT FutureTech", "https://futuretech.mit.edu/", [
         'Worked with Dr. Jayson Lynch as part of the Measuring Progress in Algorithms group',
@@ -68,7 +69,7 @@
         "Exploring textual influences and developments in early scientific writing, with the goal of extending claims to early modern corpora"
     ])}
     {@render entry("2025", "research assistant with", "MIT IDSS", "https://idss.mit.edu", [
-        "Worked with Dr. Crystal Lee and Prof. Catherine D'ignazio",
+        "Worked with Dr. Crystal Lee and Prof. Catherine D'ignazio on performing qualitative coding on cross-disciplinary scholarship on the conception of a carceral technology",
         'Qualitative research into the proliferation of carceral technologies throughout society'
     ])}
     {@render entry("2025", "undergraduate research fellow at", "NIST", "https://www.nist.gov/surf", [
@@ -101,6 +102,9 @@
     ])}
     {@render entry("2026", "undergraduate teaching assistant for", "CC.1802: Multivariable Calculus", "https://concourse.mit.edu/class/cc-1802/", [
         "MIT Concourse teaching staff for multivariable calculus, under Daniel Keliher"
+    ])}
+    {@render entry("2026", "counselor for", "√mathroots @ MIT", "https://mathroots.mit.edu/", [
+        "Residential counselor duties for √mathroots @ MIT, a high school program with MIT PRIMES"
     ])}
     {@render entry("2025", "tutor with", "MIT HKN", "https://hkn.mit.edu", [
         "tutored students taking 6.1210: Introduction to Algorithms"

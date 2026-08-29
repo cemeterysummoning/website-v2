@@ -38,6 +38,7 @@
 			<img src={$animate ? '../../pause.svg' : '../../play.svg'} onclick={playToggle} height="32"  width="32" style="display: inline-block;  cursor: pointer;">
 		</div>
 		<div class="h-full px-8 flex justify-end items-center gap-8">
+			<a href="https://orcid.org/0009-0002-9467-4251"><img src="../../orcid.svg" height="32" width="32"></a>
 			<a href="https://github.com/cemeterysummoning"><img src="../../github.svg" height="32" width="32"></a>
 			<p style="color: var(--blue);">achun [at] mit [dot] edu</p>
 		</div>
