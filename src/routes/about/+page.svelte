@@ -96,9 +96,12 @@
             <td>{txt} <a href={link}>{name}</a> <br> <Info info={ls} /></td>
         </tr>
     {/snippet}
-    {@render entry("2026", "undergraduate teaching assistant for", "6.1210: Introduction to Algorithms", "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/", [
-        "MIT EECS teaching staff for the introductory algorithms course, under Brynmor Chapman, Yael Tauman Kalai, Will Leierson",
+    {@render entry("2026 —", "undergraduate teaching assistant for", "6.1210: Introduction to Algorithms", "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/", [
+        "MIT EECS teaching staff for the introductory algorithms course",
         "Taught fundamental topics in algorithm design and analysis, such as dynamic programming, data structure analysis, and graph problem reductions"
+    ])}
+    {@render entry("2026 —", "grader for", "18.404: Introduction to the Theory of Computation", "https://math.mit.edu/~sipser/18404/", [
+        "MIT Math/EECS grading staff under Dr. Michael Sipser"
     ])}
     {@render entry("2026", "undergraduate teaching assistant for", "CC.1802: Multivariable Calculus", "https://concourse.mit.edu/class/cc-1802/", [
         "MIT Concourse teaching staff for multivariable calculus, under Daniel Keliher"
