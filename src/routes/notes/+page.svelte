@@ -5,6 +5,7 @@
 <h1>notes</h1>
 
 <div class="grid md:grid-cols-2 gap-4">
+    <Note name={"Design and Analysis of Algorithms"} path={'../../../pdfs/6.1220.pdf'} description="6.1220"/>
     <Note name={"Theory of Computation"} path={'../../../pdfs/18.404.pdf'} description="18.404"/>
     <Note name={"Probability and Random Variables"} path={'../../../pdfs/18.600.pdf'} description="18.600"/>
     <Note name={"Discrete Math for Computer Science"} path={'../../../pdfs/6.1200.pdf'} description="6.1200"/>

@@ -44,41 +44,41 @@
 {#if research}
     <table class="md:table-fixed table-auto w-[98%]"><tbody>
     {#snippet entry(year, txt, name, link, ls)}
-        <tr><td class="year w-1/5 border-y-2 align-top">{year}</td>
+        <tr><td class="year w-1/4 border-y-2 align-top">{year}</td>
             <td>{txt} <a href={link}>{name}</a> <br> <Info info={ls} /></td>
         </tr>
     {/snippet}
-    {@render entry("2026 —", "research assistant with the", "Programming Languages and Verification Group", "http://plv.csail.mit.edu/", [
+    {@render entry("05/2026 —", "research assistant with the", "Programming Languages and Verification Group", "http://plv.csail.mit.edu/", [
         'Working with Joonhyup Lee and Elvis Liu on formal verification for FPGA modules, towards implementing safety protocols within data center facilities',
         'Implemented cryptographic hashing modules in Bluespec SystemVerilog (BSV) and proved correctness and performance theorems with the Rocq Prover'
     ])}
 
-    {@render entry("2026 —", "research assistant with the", "MIT Visualization Group", "https://vis.csail.mit.edu", [
+    {@render entry("02/2026 — 08/2026", "research assistant with the", "MIT Visualization Group", "https://vis.csail.mit.edu", [
         'Worked with Dr. Josh Pollock for GoFish, a library for a formal and declarative visualization grammar; designed UIs for robust API documentation and implemented area partition features for TreeMap visualizations',
         'Working with Arnav Verma on modeling natural language responses to visualizations; designing a domain-specific language equipped with a set of cognitive operators and a type system to express the inferences viewers make when viewing a visualization',
         'Reasoning about cognitive affordances of different visual operators present within a graph that enable or repress different understandings and interpretations compared to others'
     ])}
-    {@render entry("2024 — 2026", "research assistant with", "MIT FutureTech", "https://futuretech.mit.edu/", [
+    {@render entry("10/2024 — 01/2026", "research assistant with", "MIT FutureTech", "https://futuretech.mit.edu/", [
         'Worked with Dr. Jayson Lynch as part of the Measuring Progress in Algorithms group',
         'Surveyed and analyzed time and space complexity of quantum algorithms',
         'Contributed complexity data to the Quantum Economic Advantage Calculator'
     ])}
-    {@render entry("2026", "digital humanities researcher with", "MIT Concourse", "https://concourse.mit.edu", [
+    {@render entry("01/2026", "digital humanities researcher with", "MIT Concourse", "https://concourse.mit.edu", [
         "Worked with Dr. Daniel Keliher and Dr. Erica Zimmer, examining the EEBO-TCP/VEP Early Modern Science collection",
         "Developed clustering and temporal trend models, conducting topological data analysis using methods inspired by Mapper and persistent homology",
         "Exploring textual influences and developments in early scientific writing, with the goal of extending claims to early modern corpora"
     ])}
-    {@render entry("2025", "research assistant with", "MIT IDSS", "https://idss.mit.edu", [
+    {@render entry("09/2025 — 12/2025", "research assistant with", "MIT IDSS", "https://idss.mit.edu", [
         "Worked with Dr. Crystal Lee and Prof. Catherine D'ignazio on performing qualitative coding on cross-disciplinary scholarship on the conception of a carceral technology",
         'Qualitative research into the proliferation of carceral technologies throughout society'
     ])}
-    {@render entry("2025", "undergraduate research fellow at", "NIST", "https://www.nist.gov/surf", [
+    {@render entry("06/2025 — 08/2025", "undergraduate research fellow at", "NIST", "https://www.nist.gov/surf", [
         'Work as part of the NIST Summer Undergraduate Research Fellowship',
         'Worked with Dr. Justyna Zwolak and Dr. Merritt Losert on optimizing latched readouts of quantum dot hybrid qubits',
         'Designed a U-Net-based image processing pipeline for line and point localization from charge stability diagrams',
         'Presented a poster at the 2025 Quantum Computing Program Review (QCPR)'
     ])}
-    {@render entry("2023 — 2024", "research assistant with", "UMD CCRL", "https://ccrl.umd.edu/", [
+    {@render entry("05/2023 — 03/2024", "research assistant with", "UMD CCRL", "https://ccrl.umd.edu/", [
         'Worked with Dr. Yancy Diaz-Mercado in the Collaborative Controls and Robotics Lab (CCRL)',
         'Created software for advancing remote robotic actuation projects', 
         "Programmed training data annotation program from HTML, CSS, and JavaScript for Google DeepMind's TAPIR point-wise tracking model",
@@ -96,30 +96,31 @@
             <td>{txt} <a href={link}>{name}</a> <br> <Info info={ls} /></td>
         </tr>
     {/snippet}
-    {@render entry("2026 —", "undergraduate teaching assistant for", "6.1210: Introduction to Algorithms", "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/", [
+    {@render entry("02/2026 —", "undergraduate teaching assistant for", "6.1210: Introduction to Algorithms", "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/", [
         "MIT EECS teaching staff for the introductory algorithms course",
         "Taught fundamental topics in algorithm design and analysis, such as dynamic programming, data structure analysis, and graph problem reductions"
     ])}
-    {@render entry("2026 —", "grader for", "18.404: Introduction to the Theory of Computation", "https://math.mit.edu/~sipser/18404/", [
+    {@render entry("10/2026 —", "grader for", "18.404: Introduction to the Theory of Computation", "https://math.mit.edu/~sipser/18404/", [
         "MIT Math/EECS grading staff under Dr. Michael Sipser"
     ])}
-    {@render entry("2026", "undergraduate teaching assistant for", "CC.1802: Multivariable Calculus", "https://concourse.mit.edu/class/cc-1802/", [
+    {@render entry("02/2026 — 05/2026", "undergraduate teaching assistant for", "CC.1802: Multivariable Calculus", "https://concourse.mit.edu/class/cc-1802/", [
         "MIT Concourse teaching staff for multivariable calculus, under Daniel Keliher"
     ])}
-    {@render entry("2026", "counselor for", "√mathroots @ MIT", "https://mathroots.mit.edu/", [
+    {@render entry("07/2026", "counselor for", "√mathroots @ MIT", "https://mathroots.mit.edu/", [
         "Residential counselor duties for √mathroots @ MIT, a high school program with MIT PRIMES"
     ])}
-    {@render entry("2025", "tutor with", "MIT HKN", "https://hkn.mit.edu", [
+    {@render entry("09/2025 — 12/2025", "tutor with", "MIT HKN", "https://hkn.mit.edu", [
         "tutored students taking 6.1210: Introduction to Algorithms"
     ])}
-    {@render entry("2025 — 2026", "undergraduate scholar with", "MIT SERC", "https://computing.mit.edu/cross-cutting/social-and-ethical-responsibilities-of-computing/SERC-scholars-program/", [
+    {@render entry("10/2025 — 04/2026", "undergraduate scholar with", "MIT SERC", "https://computing.mit.edu/cross-cutting/social-and-ethical-responsibilities-of-computing/SERC-scholars-program/", [
         "Member of the Social and Ethical Responsibilities of Computing Scholars program",
-        "Participated in weekly discussions and projects pertaining to human-chatbot interactions and their ethical implications"
+        "Participated in weekly discussions and projects pertaining to human-chatbot interactions and their ethical implications",
+        "Designed a prototype for a supplemental application for mindful tracking of AI chatbot usage"
     ])}
-    {@render entry("2025 —", "mail room worker at", "East Campus", "https://ec.mit.edu/about", [
+    {@render entry("09/2025 —", "mail room worker at", "East Campus", "https://ec.mit.edu/about", [
         "Managed incoming mail and packages for residents across East Campus, a dormitory at MIT"
     ])}
-    {@render entry("2024", "course instructor for", "BWSI Quantum Software", "https://beaverworks.ll.mit.edu/CMS/bw/bwsi_quantum_software", [
+    {@render entry("07/2024", "course instructor for", "BWSI Quantum Software", "https://beaverworks.ll.mit.edu/CMS/bw/bwsi_quantum_software", [
         "Teaching staff for the Beaver Works Summer Institute, 2024, with Melvin Lin",
         'Taught supplementary material about quantum computing algorithms and theory to high school juniors and seniors',
         "Lectured on mechanics behind mathematical qubit representations and Grover's algorithm",
