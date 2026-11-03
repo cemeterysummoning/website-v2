@@ -92,7 +92,7 @@
 {#if work}
 <table class="md:table-fixed table-auto w-[98%]"><tbody>
     {#snippet entry(year, txt, name, link, ls)}
-        <tr><td class="year w-1/5 border-y-2 align-top">{year}</td>
+        <tr><td class="year w-1/4 border-y-2 align-top">{year}</td>
             <td>{txt} <a href={link}>{name}</a> <br> <Info info={ls} /></td>
         </tr>
     {/snippet}
@@ -143,7 +143,7 @@
 
 <h2 id="coursework">coursework and credits</h2>
 {#snippet course(year, ls)}
-        <tr><td class="year w-1/5 border-y-2 align-top">{year}</td>
+        <tr><td class="year w-1/4 border-y-2 align-top">{year}</td>
             <td><Info info={ls} /></td>
         </tr>
     {/snippet}
